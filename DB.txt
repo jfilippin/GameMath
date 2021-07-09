@@ -1,0 +1,33 @@
+-- Geração de Modelo físico
+-- Sql ANSI 2003 - brModelo.
+
+
+
+CREATE TABLE Answer (
+IsCorrect boolean,
+Id_questions int,
+Id_users int
+)
+
+CREATE TABLE Questions (
+Id_questions int PRIMARY KEY,
+Contents varchar(50)
+)
+
+CREATE TABLE Users (
+Name varchar(50),
+Password varchar(150),
+User varchar(50),
+Id_users int PRIMARY KEY
+)
+
+CREATE TABLE Answers (
+Correct boolean,
+Contents varchar(50),
+Id_answers int PRIMARY KEY,
+Id_questions int,
+FOREIGN KEY(Id_questions) REFERENCES Questions (Id_questions)
+)
+
+ALTER TABLE Answer ADD FOREIGN KEY(Id_questions) REFERENCES Questions (Id_questions)
+ALTER TABLE Answer ADD FOREIGN KEY(Id_users) REFERENCES Users (Id_users)
