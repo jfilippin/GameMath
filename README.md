@@ -23,7 +23,8 @@ Para rodar a aplicação, nós recomendamos utilizar duas instância t2.micro (e
     > React.js;
     > Bootstrap;  
     > jQuery; 
-      
+     
+Crie o banco de dados, apartir do arquivo DB.txt. Para isso abra o mysql, e insera as linhas de comando com ";" no final.
 
 Crie uma pasta chamada frontend e uma pasta chamada backend
 Execute o comando "npx create-react-app frontend". Acesse a pasta src e remova quase todos os arquivos, com exceção do App.js
